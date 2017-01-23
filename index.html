@@ -11,17 +11,67 @@ body {
   text-align: center;
   font-family: 'Cabin', sans-serif;
   color: #3a3a3a;
-  background: #fafafa;
+  /*animation: reveal 5s 1;*/
+  padding-bottom: 400px;
+  background-color: #f4f0e6;
+}
+
+@keyframes reveal {
+  0% {
+    background: #3a3a3a;
+  }
+  30% {
+    background: #3a3a3a;
+  }
+  100% {
+    background: #f4f0e6;
+  }
 }
 
 header {
-  margin-bottom: 80px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 header h1 {
+  height: 300px;
+  line-height: 300px;
   font-family: 'Parisienne', cursive;
   font-size: 60pt;
+  margin-top: 30px;
   margin-bottom: 30px;
+  border-top: 5px solid #3a3a3a;
+  border-bottom: 5px solid #3a3a3a;
+}
+
+header h1 span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+header h1 .background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 300px;
+  background-color: #f5eaca;
+  text-align: right;
+  overflow: hidden;
+}
+
+header h1 .background img {
+  filter: opacity(40%);
+  transition: 1s;
+}
+
+header h1:hover .background img {
+  filter: unset;
 }
 
 header li {
@@ -50,16 +100,44 @@ header a:hover {
   margin-right: auto;
 }
 
+#rsvp-code label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#rsvp-code input {
+  font-size: 25pt;
+  text-align: center;
+  margin-bottom: 20px;
+  border: none;
+  background: none;
+}
+
+#rsvp-form {
+  display: none;
+}
+
+#rsvp-error {
+  display: none;
+  color: #ff2222;
+}
+
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Anne & Toby's<br/>Wedding</h1>
+  <h1>
+    <div class="background">
+      <img src="trillium.jpg" />
+    </div>
+    <span>Anne & Toby's<br/>Wedding</span>
+  </h1>
   <ul>
     <li><a href="#what">What</a></li>
     <li><a href="#when">When</a></li>
     <li><a href="#where">Where</a></li>
+    <li><a href="#rsvp">RSVP</a></li>
   </ul>
 </header>
 
@@ -86,6 +164,18 @@ On September 17th, 2017.
 At DeLille Cellars Chateau in Woodinville.
 <div id="map"></div>
 </p>
+</section>
+
+<section id="rsvp">
+<h2>RSVP</h2>
+
+<p id="rsvp-code">
+<label for="rsvp-code">Enter your code below and hit enter to see the RSVP form:</label>
+<input name="rsvp-code" type="text" placeholder="<code>" />
+<span id="rsvp-error">* Incorrect code</span>
+</p>
+
+<iframe id="rsvp-form" src="https://docs.google.com/forms/d/e/1FAIpQLScFG3WTwdgZj4dnXuF9n2nBIqRBoNKDcHz5DH5Q-70xw4HB8A/viewform?embedded=true" width="600" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 </section>
 
 <script>
@@ -202,6 +292,29 @@ function initMap() {
     ]
   });
 }
+
+function init() {
+  var codeInput = document.querySelector('#rsvp-code input');
+  codeInput.addEventListener('keydown', function(e) {
+    if (e.key != 'Enter') {
+      return;
+    }
+
+    var code = codeInput.value.toLowerCase();
+    var errorMsg = document.getElementById('rsvp-error');
+    if (code != 'galileo') {
+      errorMsg.style.display = 'block';
+      return;
+    }
+
+    var codeForm = document.getElementById('rsvp-code');
+    var rsvpForm = document.getElementById('rsvp-form');
+    codeForm.style.display = 'none';
+    rsvpForm.style.display = 'inline';
+  });
+}
+
+document.addEventListener('DOMContentLoaded', init);
 
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=[API KEY]&callback=initMap"></script>
