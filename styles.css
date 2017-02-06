@@ -1,6 +1,4 @@
 body {
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   font-family: 'Cabin', sans-serif;
   color: #3a3a3a;
@@ -24,8 +22,6 @@ body {
 header {
   margin-top: 80px;
   margin-bottom: 40px;
-  margin-left: 0;
-  margin-right: 0;
 }
 
 header h1 {
@@ -51,7 +47,6 @@ header h1 .background {
   right: 0;
   z-index: -1;
   display: block;
-  width: 100%;
   height: 300px;
   background-color: #f5eaca;
   text-align: right;
@@ -69,11 +64,12 @@ header h1:hover .background img {
 
 header li {
   list-style: none;
-  display: inline;
+  display: inline-block;
   padding: 10px;
 }
 
 header ul {
+  margin: 0;
   padding: 0;
 }
 
@@ -86,11 +82,20 @@ header a:hover {
   border-bottom: solid 3px #3a3a3a;
 }
 
+section {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 #map {
   height: 250px;
   width: 400px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+}
+
+#rsvp iframe {
+  width: 600px;
+  height: 1400px;
 }
 
 #rsvp-code label {
@@ -113,4 +118,18 @@ header a:hover {
 #rsvp-error {
   display: none;
   color: #ff2222;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 50pt;
+  }
+
+  #map {
+    width: 80%;
+  }
+
+  #rsvp iframe {
+    width: 80%;
+  }
 }

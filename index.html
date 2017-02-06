@@ -2,7 +2,9 @@
 <html>
   <head>
     <title>Anne & Toby's Wedding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Cabin|Parisienne" rel="stylesheet">
+    <link href="normalize.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <script src="map.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj-7x7oRmbJ0dLyr7QGbDlGnjfb8KLZ8c&callback=initMap"></script>
@@ -17,12 +19,14 @@
         </div>
         <span>Anne & Toby's<br/>Wedding</span>
       </h1>
-      <ul>
-        <li><a href="#what">What</a></li>
-        <li><a href="#when">When</a></li>
-        <li><a href="#where">Where</a></li>
-        <li><a href="#rsvp">RSVP</a></li>
-      </ul>
+      <nav>
+        <ul>
+          <li><a href="#what">What</a></li>
+          <li><a href="#when">When</a></li>
+          <li><a href="#where">Where</a></li>
+          <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+      </nav>
     </header>
 
   <section id="what">
@@ -59,7 +63,7 @@
       <span id="rsvp-error">* Incorrect code</span>
     </p>
 
-    <iframe id="rsvp-form" src="https://docs.google.com/forms/d/e/1FAIpQLScFG3WTwdgZj4dnXuF9n2nBIqRBoNKDcHz5DH5Q-70xw4HB8A/viewform?embedded=true" width="600" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    <iframe id="rsvp-form" src="https://docs.google.com/forms/d/e/1FAIpQLScFG3WTwdgZj4dnXuF9n2nBIqRBoNKDcHz5DH5Q-70xw4HB8A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
   </section>
 
   </body>
