@@ -96,12 +96,10 @@ section {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  transform: translateX(0%);
-  transition: transform 1s ease-in-out;
 }
 
 section.hidden {
-  transform: translateX(100%);
+  display: none;
 }
 
 #map {
