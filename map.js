@@ -107,26 +107,3 @@ function initMap() {
     ]
   });
 }
-
-function init() {
-  var codeInput = document.querySelector('#rsvp-code input');
-  codeInput.addEventListener('keydown', function(e) {
-    if (e.key != 'Enter') {
-      return;
-    }
-
-    var code = codeInput.value.toLowerCase();
-    var errorMsg = document.getElementById('rsvp-error');
-    if (code != 'galileo') {
-      errorMsg.style.display = 'block';
-      return;
-    }
-
-    var codeForm = document.getElementById('rsvp-code');
-    var rsvpForm = document.getElementById('rsvp-form');
-    codeForm.style.display = 'none';
-    rsvpForm.style.display = 'inline';
-  });
-}
-
-document.addEventListener('DOMContentLoaded', init);

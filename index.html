@@ -6,18 +6,18 @@
     <link href="https://fonts.googleapis.com/css?family=Cabin|Parisienne" rel="stylesheet">
     <link href="normalize.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="main.js"></script>
     <script src="map.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj-7x7oRmbJ0dLyr7QGbDlGnjfb8KLZ8c&callback=initMap"></script>
   </head>
-
   <body>
-
     <header>
       <h1>
         <div class="background">
           <img src="trillium.jpg" />
         </div>
-        <span>Anne & Toby's<br/>Wedding</span>
+        <span>Anne & Toby<br/>17 September 2017</span>
       </h1>
       <nav>
         <ul>
@@ -29,42 +29,43 @@
       </nav>
     </header>
 
-  <section id="what">
-    <h2>What</h2>
+    <div id="sections">
+      <section id="what">
+        <h2>What</h2>
 
-    <p>
-      Anne & Toby are getting married!
-    </p>
-  </section>
+        <p>
+          Anne & Toby are getting married!
+        </p>
+      </section>
 
-  <section id="when">
-    <h2>When</h2>
+      <section id="when" class="hidden">
+        <h2>When</h2>
 
-    <p>
-    On September 17th, 2017.
-    </p>
-  </section>
+        <p>
+          On September 17th, 2017.
+        </p>
+      </section>
 
-  <section id="where">
-    <h2>Where</h2>
+      <section id="where" class="hidden">
+        <h2>Where</h2>
 
-    <p>
-    At DeLille Cellars Chateau in Woodinville.
-    <div id="map"></div>
-    </p>
-  </section>
+        <p>
+        <ABBR></ABBR>t DeLille Cellars Chateau in Woodinville.
+        <div id="map"></div>
+        </p>
+      </section>
 
-  <section id="rsvp">
-  <h2>RSVP</h2>
+      <section id="rsvp" class="hidden">
+      <h2>RSVP</h2>
 
-    <p id="rsvp-code">
-      <label for="rsvp-code">Enter your code below and hit enter to see the RSVP form:</label>
-      <input name="rsvp-code" type="text" placeholder="<code>" />
-      <span id="rsvp-error">* Incorrect code</span>
-    </p>
+        <p id="rsvp-code">
+          <label for="rsvp-code">Enter your code below and hit enter to see the RSVP form:</label>
+          <input name="rsvp-code" type="text" placeholder="<code>" />
+          <span id="rsvp-error">* Incorrect code</span>
+        </p>
 
-    <iframe id="rsvp-form" src="https://docs.google.com/forms/d/e/1FAIpQLScFG3WTwdgZj4dnXuF9n2nBIqRBoNKDcHz5DH5Q-70xw4HB8A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-  </section>
-
+        <iframe id="rsvp-form" src="https://docs.google.com/forms/d/e/1FAIpQLScFG3WTwdgZj4dnXuF9n2nBIqRBoNKDcHz5DH5Q-70xw4HB8A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+      </section>
+    </div>
   </body>
 </html>

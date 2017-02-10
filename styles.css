@@ -20,15 +20,15 @@ body {
 }
 
 header {
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 
 header h1 {
-  height: 300px;
-  line-height: 300px;
+  height: 200px;
+  line-height: 200px;
   font-family: 'Parisienne', cursive;
-  font-size: 60pt;
+  font-size: 50pt;
   margin-top: 30px;
   margin-bottom: 30px;
   border-top: 5px solid #3a3a3a;
@@ -47,7 +47,7 @@ header h1 .background {
   right: 0;
   z-index: -1;
   display: block;
-  height: 300px;
+  height: 200px;
   background-color: #f5eaca;
   text-align: right;
   overflow: hidden;
@@ -62,29 +62,46 @@ header h1:hover .background img {
   filter: unset;
 }
 
-header li {
+nav li {
   list-style: none;
   display: inline-block;
   padding: 10px;
 }
 
-header ul {
+nav ul {
   margin: 0;
   padding: 0;
 }
 
-header a {
+nav a {
   text-decoration: none;
   color: #3a3a3a;
 }
 
-header a:hover {
+nav a:hover {
   border-bottom: solid 3px #3a3a3a;
 }
 
+nav a.selected {
+  border-bottom: solid 3px #3a3a3a;
+}
+
+#sections {
+  overflow: hidden;
+  position: relative;
+}
+
 section {
+  position: absolute;
+  width: 100%;
   padding-left: 10px;
   padding-right: 10px;
+  transform: translateX(0%);
+  transition: transform 1s ease-in-out;
+}
+
+section.hidden {
+  transform: translateX(100%);
 }
 
 #map {
@@ -122,7 +139,7 @@ section {
 
 @media (max-width: 600px) {
   header h1 {
-    font-size: 50pt;
+    font-size: 35pt;
   }
 
   #map {
