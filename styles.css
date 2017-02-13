@@ -78,11 +78,7 @@ nav a {
   color: #3a3a3a;
 }
 
-nav a:hover {
-  border-bottom: solid 3px #3a3a3a;
-}
-
-nav a.selected {
+nav a:hover, nav a.selected {
   border-bottom: solid 3px #3a3a3a;
 }
 
@@ -92,13 +88,12 @@ nav a.selected {
 }
 
 section {
-  position: absolute;
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
 }
 
-section.hidden {
+section:not(:first-child) {
   display: none;
 }
 
