@@ -7,10 +7,6 @@
     <link href="normalize.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <link href="timeline.css" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="main.js"></script>
-    <script src="map.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj-7x7oRmbJ0dLyr7QGbDlGnjfb8KLZ8c&callback=initMap"></script>
   </head>
   <body>
     <header>
@@ -36,7 +32,10 @@
 
     			<div class="highlights">
     					<a class="heart first">Highlight 1<span></span></a>
-    					<h4><span>June 20, 2013</span><br>Love at first byte</h4>
+    					<h4>
+                <span>June 20, 2013</span><br>Love at first byte<br>
+                <img src="http://placehold.it/350x400">
+              </h4>
     			</div>
 
     			<div class="highlights">
@@ -77,7 +76,7 @@
     		</div>
       </section>
 
-      <section id="when" class="hidden">
+      <section id="when">
         <h2>When</h2>
 
         <p>
@@ -85,14 +84,14 @@
         </p>
       </section>
 
-      <section id="where" class="hidden">
+      <section id="where">
         <p>
-        <ABBR></ABBR>at DeLille Cellars Chateau in Woodinville.
+          At DeLille Cellars Chateau in Woodinville.
         <div id="map"></div>
         </p>
       </section>
 
-      <section id="rsvp" class="hidden">
+      <section id="rsvp">
       <h2>RSVP</h2>
 
         <p id="rsvp-code">
@@ -104,5 +103,10 @@
         <iframe id="rsvp-form" src="https://docs.google.com/forms/d/e/1FAIpQLScFG3WTwdgZj4dnXuF9n2nBIqRBoNKDcHz5DH5Q-70xw4HB8A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
       </section>
     </div>
-  </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj-7x7oRmbJ0dLyr7QGbDlGnjfb8KLZ8c"></script>
+  </body> 
 </html>

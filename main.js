@@ -1,9 +1,4 @@
 $(document).ready(function() {
-  var updateHeight = function() {
-    var height = $('section').not('.hidden').height();
-    $('#sections').height(height);
-  };
-
   var codeInput = $('#rsvp-code input');
   codeInput.keydown(function(e) {
     if (e.key != 'Enter') {
@@ -18,10 +13,7 @@ $(document).ready(function() {
 
     $('#rsvp-code').hide();
     $('#rsvp-form').show();
-    updateHeight();
   });
-
-  updateHeight();
 
   var links = $('nav a');
   links.first().addClass('selected');
@@ -30,13 +22,15 @@ $(document).ready(function() {
     var linkTarget = link.attr('href');
 
     var sections = $('section');
-    sections.addClass('hidden');
-    sections.filter(linkTarget).removeClass();
+    sections.hide();
+    sections.filter(linkTarget).show();
 
     links.removeClass();
     link.addClass('selected');
 
-    updateHeight();
+    if (linkTarget == '#where' && $('#map').is(':empty')) {
+      initMap();
+    }
 
     e.preventDefault();
     return false;
