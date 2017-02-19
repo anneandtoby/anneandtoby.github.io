@@ -19,6 +19,16 @@ body {
   }
 }
 
+a, a:hover, a:visited {
+  color: inherit;
+}
+
+p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 header {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -62,8 +72,13 @@ header h1:hover .background img {
   filter: unset;
 }
 
-nav li {
+ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+nav li {
   display: inline-block;
   padding: 10px;
 }
@@ -75,7 +90,6 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #3a3a3a;
 }
 
 nav a:hover, nav a.selected {
@@ -88,7 +102,9 @@ nav a:hover, nav a.selected {
 }
 
 section {
-  width: 100%;
+  max-width: 875px;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -97,10 +113,38 @@ section:not(:first-child) {
   display: none;
 }
 
+.venue img {
+  width: 400px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-left img {
+  float: left;
+  margin-right: 10px;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-right img {
+  float: right;
+  margin-left: 10px;
+}
+
+.clear {
+  clear: both;
+}
+
 #map {
   height: 250px;
   width: 400px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 #rsvp iframe {

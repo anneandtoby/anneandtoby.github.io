@@ -2,11 +2,11 @@
 	position: relative;
 	display: block;
 	overflow: auto;
-	margin-top: 40px;
+	margin-top: 10px;
 	height: 600px;
 	background: url(arrow.png) no-repeat;
 	background-position: 0px 0px;
-  width: 900px;
+  width: 875px;
   margin-left: auto;
   margin-right: auto;
 }
