@@ -115,30 +115,77 @@ section:not(:first-child) {
 
 .venue img {
   width: 400px;
-  margin-left: 5px;
-  margin-right: 5px;
+  padding: 0 5px;
 }
 
-.align-left {
-  text-align: left;
-}
-
-.align-left img {
-  float: left;
-  margin-right: 10px;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.align-right img {
-  float: right;
-  margin-left: 10px;
+@media (max-width: 450px) {
+  .venue img {
+    width: 90%;
+  }
 }
 
 .clear {
   clear: both;
+}
+
+#story img {
+  width: 250px;
+  height: 250px;
+}
+
+#story hr {
+  border: none;
+  background: #668844;
+  height: 3px;
+  margin: 30px 10px;
+}
+
+#registry ul {
+  margin: 0 auto;
+  max-width: 550px;
+  text-align: center;
+}
+
+#registry li {
+  display: inline-block;
+  margin: 10px;
+  vertical-align: middle;
+}
+
+#registry img:hover {
+  filter: opacity(0.5);
+}
+
+@media (min-width: 600px) {
+  #story .left {
+    text-align: left;
+  }
+
+  #story .left img {
+    float: left;
+    margin-right: 10px;
+  }
+
+  #story .right {
+    text-align: right;
+  }
+
+  #story .right img {
+    float: right;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  #story > p {
+    text-align: center;
+  }
+
+  #story > p img {
+    float: none;
+    display: block;
+    margin: 10px auto;
+  }
 }
 
 #map {
@@ -185,5 +232,13 @@ section:not(:first-child) {
 
   #rsvp iframe {
     width: 80%;
+  }
+
+  #story > p {
+    text-align: center;
+  }
+
+  #story > p img {
+    float: none;
   }
 }
