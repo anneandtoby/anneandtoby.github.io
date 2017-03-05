@@ -140,19 +140,19 @@ section:not(:first-child) {
   margin: 30px 10px;
 }
 
-#registry ul {
+#registries ul {
   margin: 0 auto;
   max-width: 550px;
   text-align: center;
 }
 
-#registry li {
+#registries li {
   display: inline-block;
   margin: 10px;
   vertical-align: middle;
 }
 
-#registry img:hover {
+#registries img:hover {
   filter: opacity(0.5);
 }
 
