@@ -15,6 +15,10 @@
   .timeline {
     display: none;
   }
+
+  .timeline-header {
+  	display: none;
+  }
 }
 
 .first {
