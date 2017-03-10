@@ -3,7 +3,7 @@
 	display: block;
 	overflow: auto;
 	margin-top: 10px;
-	height: 600px;
+	height: 400px;
 	background: url(arrow.png) no-repeat;
 	background-position: 0px 0px;
   width: 875px;
@@ -12,12 +12,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .timeline {
+  .timeline-wrapper {
     display: none;
-  }
-
-  .timeline-header {
-  	display: none;
   }
 }
 
