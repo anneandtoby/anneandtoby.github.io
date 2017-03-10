@@ -143,7 +143,7 @@ section:not(:first-child) {
   position: relative;
   width: 750px;
   overflow: hidden;
-  padding: 66.66% 0 0 0;
+  padding: 62% 0 0 0;
   margin: 0 auto;
 }
 
@@ -166,23 +166,27 @@ section:not(:first-child) {
 }
 
 #slideshow > img:nth-child(1) {
-   animation: xfade 30s 24s infinite;
+   animation: xfade 36s 30s infinite;
 }
 
 #slideshow > img:nth-child(2) {
-   animation: xfade 30s 18s infinite;
+   animation: xfade 36s 24s infinite;
 }
 
 #slideshow > img:nth-child(3) {
-   animation: xfade 30s 12s infinite;
+   animation: xfade 36s 18s infinite;
 }
 
 #slideshow > img:nth-child(4) {
-   animation: xfade 30s 6s infinite;
+   animation: xfade 36s 12s infinite;
 }
 
 #slideshow > img:nth-child(5) {
-   animation: xfade 30s 0s infinite;
+   animation: xfade 36s 6s infinite;
+}
+
+#slideshow > img:nth-child(6) {
+   animation: xfade 36s 0s infinite;
 }
 
 @keyframes xfade{
