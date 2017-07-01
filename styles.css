@@ -112,6 +112,11 @@ section:not(:first-child) {
   display: none;
 }
 
+h3:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .venue img {
   width: 400px;
   padding: 0 5px;
